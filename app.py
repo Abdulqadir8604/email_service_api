@@ -8,9 +8,9 @@ def send_email(recipient, subject, body):
         sender_password = "dcdf xayd nigi eqov"
         yag = yagmail.SMTP(sender_email, sender_password)
         yag.send(recipient, subject, body)
-        return jsonify({"success": True})
+        return True
     except:
-        return jsonify({"error": "Email could not be sent"})
+        return False
 
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def show_email(email, subject, body):
         'recipient_email': email,
         'subject': subject,
         'body': body,
-        'message': message
+        'sent': message
     })
 
 
@@ -44,7 +44,7 @@ def send():
         'recipient_email': email,
         'subject': subject,
         'body': body,
-        'message': message
+        'sent': message
     })
 
 
