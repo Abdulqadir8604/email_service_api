@@ -5,7 +5,7 @@ import yagmail
 def send_email(recipient, subject, body):
     try:
         sender_email = "lamaqemailer@gmail.com"
-        sender_password = "kenk oqub kbwk pyeo"
+        sender_password = "xuyt hynu qvyz dlqt"
         yag = yagmail.SMTP(sender_email, sender_password)
         yag.send(recipient, subject, body)
         return True
